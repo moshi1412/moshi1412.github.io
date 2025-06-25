@@ -2,6 +2,6 @@
 
 ---
 
-##2025.6.25
+## 2025.6.25
 
 webpage for moshi-kun was created
