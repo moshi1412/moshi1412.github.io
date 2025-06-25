@@ -1,5 +1,7 @@
-# moshi1412.github.io
-<font size="2">这是中号字</font>
+# moshi1412.page updating log
+
 ---
 
-webpage for moshi-kun
+##2025.6.25
+
+webpage for moshi-kun was created
