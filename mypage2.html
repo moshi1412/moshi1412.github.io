@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>    
+    <head >
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title id="title">～墨汐のへや&nbsp;&nbsp;幸せの世界へ～&nbsp;</title>
+        <script src="scrolltitle.js"></script>
+    </head>
+    <link href="pattern.css" rel="stylesheet" type="text/css"/>
+    <audio id="sound" src=""></audio>
+    <body>
+        
+        <div class="container">   
+            <div class="pageback"></div>        
+            <div class="mainpage">
+                <div class="typist" id="typist"></div>
+                <div class="puq" id="l">
+                    <img class="circle" style="left:12%; top:25%;" src="/OIP-C.jpg">
+                    <div class="larrow" >                        
+                        <div style="position:absolute;left:10%;top:5%;float:left;">记录一下生活点滴吧~</div>
+                        <div style="position:absolute;left:75%;top:5%;float:left;color:darkgray" id="time"></div>
+                        <textarea class="textbox" style="top:40%;left:10%; width:80%;height:fit-content;"></textarea>
+                        <img src="/R-C.jpg" onclick="" style="position:absolute;top:50%;left:3%;width:auto;height:30%;">
+                        <button onclick="playsound()" class="button" style=" top:50%;left:93%;">上传</button>
+                    </div>
+                </div>
+                <div class="puq" id="r">
+                    <img class="circle" style="left:73%; top:50px;" src="/OIP-C.jpg">
+                    <div class="rarrow" >                        
+                        <div style="position:absolute;height:20px;width:auto;left:65%;top:12%;float:left;color:black;">记录一下生活点滴吧~</div>
+                        <div style="position:absolute;left:75%;top:5%;float:left;color:darkgray" id="time"></div>
+                        <textarea class="textbox" style="top:40%;left:10%; width:75%;height:50%;"></textarea>
+                        <img src="/R-C.jpg" onclick="" style="position:absolute;top:50%;left:3%;width:auto;height:30%;">
+                        <button onclick="playsound()" class="button" style="top:20%;left:3%;">上传</button>
+                    </div>
+                </div>
+               
+            </div>
+            <img class="mainimage" src="高木.png"/>
+            <div class="side-menu" id="学习"  style="top:17%"></div>
+            <div class="side-menu" id="思考"  style="top:32%"></div>
+            <div class="side-menu" id="游戏"  style="top:48%"></div>
+            <div class="side-menu" id="动漫"  style="top:64%"></div>
+        </div>
+        <div class="sidebar">
+            <div class="circle" style="background-color:white;top:0.5%;border:2px dashed rgb(177, 137, 246)"></div>
+            <img class="icon" src="/icon.png"/>
+            <div class="label" id="0">学习<br>日志</div>
+            <div class="label" id="1">杂念<br>集思</div>
+            <div class="label" id="2">游戏<br>记录</div>
+            <div class="label" id="3">动漫<br>日志</div>
+        </div>
+        <div class="login">
+            <p id="username">moxi</p>
+            <img class="userhead" src="/OIP-C.jpg"/>
+        </div>
+        <script lang="javascript">
+            function playSound() {
+            var sound = document.getElementById("sound");
+            sound.play();
+            }
+        </script> 
+        </script>
+        <script src="typeeffect.js"></script>
+        <script id="timegen" lang="javascript">
+            var date=new Date();
+            year=date.getFullYear(); day=date.getDay();month=date.getMonth()+1; datetime=date.getDate();
+            let text =  `今天是${year}-${month}-${datetime} 星期${day}`;
+            document.getElementById("time").innerText=text;
+        </script>
+        <script id="sideshift" src="sidemenu.js"></script>
+        <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+    </body>
+</html>

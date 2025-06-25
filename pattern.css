@@ -1,0 +1,266 @@
+@charset"UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 定义 @font-face 规则 */
+@font-face {
+    font-family: 'type' ;
+    src: local("爱点风雅黑");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'blog';
+    src:local("鼎猎宋刻体");
+    font-weight: normal;
+    font-style: normal;
+}
+@keyframes scaling{
+    0% {transform: scale(100%); }
+    100%{transform: scale(120%);}
+}
+@keyframes rev-scaling {
+    0% {transform: scale(120%); }
+    100%{transform: scale(100%);}
+}
+@keyframes buttonpress{
+    0% {transform:scale(1); opacity:1; }
+    50%{transform:scale(1.2); opacity:0;}
+    100%{transform:scale(1); opacity:1;}
+}
+@keyframes outshift {
+    0%{left:-30%;}
+    100%{left:0%;}
+}
+@keyframes shiftin {
+    0%{left:0;}
+    100%{left:-30%;}
+}
+a:link{color:rgb(89, 227, 103);text-decoration:none}
+a:visited{color:aliceblue;text-decoration:none}
+a:hover{color:rgb(208, 134, 65);text-decoration:none}
+a:active{color:rgb(52, 32, 20);text-decoration:none}
+body{
+    /* background-color: red; */
+    background-image:url(高.jpg);
+    background-attachment: fixed;    
+    background-repeat: no-repeat;
+    background-size:auto,auto;
+    background-position: center;
+    cursor:url("/未标题-1.png"),auto;
+    
+}
+
+.container{
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    left:6%;
+    width:94%;
+    height:100%;
+}
+.sidebar{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(48, 63, 66, 1);
+    height:100%;
+    width:6%;
+    float: none;
+    position:fixed;
+    border-radius: 20px;
+    
+}
+.mainimage{
+    position:absolute;
+    top:10%;
+    height:40%;
+    overflow:hidden;
+    border-radius: 50px;
+    filter:drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+    /* border:5px solid rgba(0, 0, 0, 0.5); */
+}
+.pageback{
+    position:absolute;
+    top:40%; 
+    width:100%;
+    height:auto;
+    background-color: rgba(210, 210, 210, 0.6);   
+    min-height: 100%;
+}
+.mainpage{
+    position:absolute;
+    display: flex;
+    gap:20px;
+    flex-direction: column;
+    align-items: center;
+    top:55%; 
+    width:100%;
+    height:auto;
+    background-color: transparent;
+}
+.icon{
+    position:absolute;
+    top:30px;
+    left:10%;
+    width:70%;
+    height:auto;
+    transform:rotate(22deg);
+}
+.label{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:5%;
+    width:80%;
+    height:15%;
+    font-family:"楷体";
+    font-size:20pt;
+    color:aliceblue;
+    float:none;
+    border-bottom:2px solid rgba(202, 203, 203,0.5);
+    overflow:hidden;
+}
+.label:hover{color:aqua;font-size:22pt;}
+.cuttingline{
+    position:relative;
+    color:azure;
+    width:50%;
+    top:13%;
+    text-align: center;
+    size:2px;
+}
+.typist{
+    position:static;
+    width:auto;
+    min-width: 100px;
+    font-family:"type";
+    font-size:50pt;
+    font-style: italic;   
+    color:rgba(0, 0, 0, 0.5);
+    min-height:100px;
+}
+.puq{
+    position:relative;
+    margin:30px;
+    width:100%;
+    height:max-content;
+    font-size:22pt;
+    font-family: "blog";
+}
+.larrow{
+    width: 60%;
+    left:20%;
+    height:max-content;
+    color: #000000;
+    line-height: 50px;
+    position: relative;
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+    min-height: 150px;
+    float:left;
+}
+.larrow::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 40px;
+    left: -19px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 20px solid rgb(255, 255, 255);
+    transform: skewY(-50deg);     
+}
+.rarrow{
+    position:absolute;
+    margin: 20px auto;
+    width:70%;
+    left:5%;
+    height:200px;
+    color: #fff;
+    line-height: 50px;
+    background: rgb(255, 255, 255);
+    clip-path: polygon(0 0, 88% 0, 88% 35%, 95% 50%, 88% 65%, 88% 100%, 0 100%);
+    border: 1px solid teal;
+    float:left;
+}
+.textbox{
+    position:absolute;
+    min-height:30%;
+    max-height:200%;
+    font-size:22pt;
+    word-wrap: break-word;
+    color:rgb(119, 119, 119); 
+}
+.circle{
+    position:absolute;
+    margin:10px;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    float:left;
+    border:5px solid rgb(152, 43, 174);
+}
+.circle:hover{
+    animation: scaling 0.5s ease forwards;
+}
+.circle:not(:hover){
+    animation: rev-scaling 0.5s ease forwards;
+}
+.button{
+    position:absolute;
+    padding:10px,20px;
+    font-size:20pt;
+    border:none;
+    background-color: rgb(92, 218, 218);
+    border-radius: 5px;
+}
+.button:hover{
+    background-color: rgb(79, 167, 167);
+    cursor:pointer;
+}
+.button:active{
+    animation: buttonpress 0.4s forwards;
+}
+.login{
+    position:fixed;
+    display: flex;
+    padding-left:20px;
+    padding-right: 20px;
+    width:200px;
+    left:90%;
+    height:70px;
+    background-color: bisque;
+    align-items: center;
+    font-size:18pt;
+    overflow: hidden;
+}
+.userhead{
+    position: absolute;
+    left:120px;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:3px dashed black;
+    float:left;
+    cursor:pointer;
+}
+.side-menu{
+    display:grid;
+    width:30%;
+    left:-30%;
+    height:max-content;
+    min-height:20%;
+    background-color: rgba(48, 63, 66, 0.8);
+    float: none;
+    position:fixed;
+    border-radius: 20px;
+    animation-name: none;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+}
